@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 
-    <env name="OPENAI_API_KEY" value="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"/>
+    <env name="OPENAI_API_KEY" value=""/>
     <env name="DESCRIPTION_FOLDER_PATH" value="$(find drone_gpt)/description"/>
 
     <node name="gptPrompter" pkg="drone_gpt" type="gpt_prompter.py" output="screen"/>
