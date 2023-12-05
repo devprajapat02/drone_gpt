@@ -1,0 +1,9 @@
+{
+    "prompt": "Go to 3 comma 4 comma 5",
+    "returns": [
+        {
+            "action": "fly_to_xyz",
+            "params": [3, 4, 5, "cm"]
+        }
+    ]
+}

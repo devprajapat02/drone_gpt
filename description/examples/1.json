@@ -1,0 +1,10 @@
+{
+    "prompt": "Fly up 50 centimetres",
+    "returns": [
+        {
+            "action": "fly_up",
+            "params": [50, "cm"]
+        }
+    ]
+}
+

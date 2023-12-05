@@ -1,0 +1,275 @@
+{
+  "name": "DroneController",
+  "description": "A controller for managing the movements and actions of a drone.",
+  "api": [
+    {
+        "name": "takeoff",
+        "description": "Initiates takeoff for the drone.",
+        "params": []
+    },
+    {
+        "name": "land",
+        "description": "Initiates landing for the drone.",
+        "params": []
+    },
+    {
+      "name": "fly_forward",
+      "description": "Moves the drone forward by a specified distance.",
+      "params": [
+        {
+          "name": "distance",
+          "description": "Distance to move forward",
+          "type": "Float",
+          "units": ["m", "in", "cm"],
+          "range": {"start": 0, "end": null}
+        },
+        {
+          "name": "units",
+          "description": "Unit of the value",
+          "type": "string",
+          "values": ["m", "in", "cm"],
+          "default": ["cm"]
+        }
+      ]
+    },
+    {
+      "name": "fly_backward",
+      "description": "Moves the drone backward by a specified distance.",
+      "params": [
+        {
+          "name": "distance",
+          "description": "Distance to move backward",
+          "type": "Float",
+          "units": ["m", "in", "cm"],
+          "range": {"start": 0, "end": null}
+        },
+        {
+          "name": "units",
+          "description": "Unit of the value",
+          "type": "string",
+          "values": ["m", "in", "cm"],
+          "default": ["cm"]
+        }
+      ]
+    },
+    {
+      "name": "fly_left",
+      "description": "Moves the drone left by a specified distance.",
+      "params": [
+        {
+          "name": "distance",
+          "description": "Distance to move left",
+          "type": "Float",
+          "units": ["m", "in", "cm"],
+          "range": {"start": 0, "end": null}
+        },
+        {
+          "name": "units",
+          "description": "Unit of the value",
+          "type": "string",
+          "values": ["m", "in", "cm"],
+          "default": ["cm"]
+        }
+      ]
+    },
+    {
+      "name": "fly_right",
+      "description": "Moves the drone right by a specified distance.",
+      "params": [
+        {
+          "name": "distance",
+          "description": "Distance to move right",
+          "type": "Float",
+          "units": ["m", "in", "cm"],
+          "range": {"start": 0, "end": null}
+        },
+        {
+          "name": "units",
+          "description": "Unit of the value",
+          "type": "string",
+          "values": ["in", "cm", "m"],
+          "default": ["cm"]
+        }
+      ]
+    },
+    {
+      "name": "fly_up",
+      "description": "Moves the drone up by a specified distance.",
+      "params": [
+        {
+          "name": "distance",
+          "description": "Distance to move up",
+          "type": "Float",
+          "units": ["m", "in", "cm"],
+          "range": {"start": 0, "end": null}
+        },
+        {
+          "name": "units",
+          "description": "Unit of the value",
+          "type": "string",
+          "values": ["m", "in", "cm"],
+          "default": ["cm"]
+        }
+      ]
+    },
+    {
+      "name": "fly_down",
+      "description": "Moves the drone down by a specified distance.",
+      "params": [
+        {
+          "name": "distance",
+          "description": "Distance to move down",
+          "type": "Float",
+          "units": ["m", "in", "cm"],
+          "range": {"start": 0, "end": null}
+        },
+        {
+          "name": "units",
+          "description": "Unit of the value",
+          "type": "string",
+          "values": ["m", "in", "cm"],
+          "default": ["cm"]
+        }
+      ]
+    },
+    {
+      "name": "fly_to_xyz",
+      "description": "Moves the drone to a specific x, y, z position.",
+      "params": [
+        {
+          "name": "x",
+          "description": "X-coordinate",
+          "type": "Float",
+          "units": ["in", "cm"]
+        },
+        {
+          "name": "y",
+          "description": "Y-coordinate",
+          "type": "Float",
+          "units": ["in", "cm"]
+        },
+        {
+          "name": "z",
+          "description": "Z-coordinate",
+          "type": "Float",
+          "units": ["in", "cm"]
+        },
+        {
+          "name": "units",
+          "description": "Unit of the value",
+          "type": "string",
+          "values": ["m", "in", "cm"],
+          "default": ["cm"]
+        }
+      ]
+    },
+    {
+      "name": "fly_curve",
+      "description": "Moves the drone in a curved path through two specified points.",
+      "params": [
+        {
+          "name": "x1",
+          "description": "X-coordinate of the first point",
+          "type": "Float",
+          "units": ["in", "cm"]
+        },
+        {
+          "name": "y1",
+          "description": "Y-coordinate of the first point",
+          "type": "Float",
+          "units": ["in", "cm"]
+        },
+        {
+          "name": "z1",
+          "description": "Z-coordinate of the first point",
+          "type": "Float",
+          "units": ["in", "cm"]
+        },
+        {
+          "name": "x2",
+          "description": "X-coordinate of the second point",
+          "type": "Float",
+          "units": ["in", "cm"]
+        },
+        {
+          "name": "y2",
+          "description": "Y-coordinate of the second point",
+          "type": "Float",
+          "units": ["in", "cm"]
+        },
+        {
+          "name": "z2",
+          "description": "Z-coordinate of the second point",
+          "type": "Float",
+          "units": ["in", "cm"]
+        },
+        {
+          "name": "units",
+          "description": "Unit of the value",
+          "type": "string",
+          "values": ["m", "in", "cm"],
+          "default": ["cm"]
+        }
+      ]
+    },
+    {
+      "name": "flip_forward",
+      "description": "Flips the drone forward.",
+      "params": []
+    },
+    {
+      "name": "flip_backward",
+      "description": "Flips the drone backward.",
+      "params": []
+    },
+    {
+      "name": "flip_left",
+      "description": "Flips the drone left.",
+      "params": []
+    },
+    {
+      "name": "flip_right",
+      "description": "Flips the drone right.",
+      "params": []
+    },
+    {
+        "name": "yaw_left",
+        "description": "Rotates the drone left by a specified angle in degrees.",
+        "params": [
+            {
+                "name": "angle",
+                "description": "Angle of rotation",
+                "type": "Float",
+                "units": "Degrees",
+                "range": {"start": 0, "end": null}
+            }
+        ]
+    },
+    {
+        "name": "yaw_right",
+        "description": "Rotates the drone right by a specified angle in degrees.",
+        "params": [
+            {
+                "name": "angle",
+                "description": "Angle of rotation",
+                "type": "Float",
+                "units": "Degrees",
+                "range": {"start": 0, "end": null}
+            }
+        ]
+    },
+    {
+        "name": "set_speed",
+        "description": "Sets the speed of the drone.",
+        "params": [
+            {
+                "name": "speed",
+                "description": "Speed of the drone",
+                "type": "Float",
+                "units": "cm/s",
+                "range": {"start": 0, "end": null}
+            }
+        ]
+    }
+]
+}

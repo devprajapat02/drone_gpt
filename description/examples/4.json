@@ -1,0 +1,5 @@
+{
+    "prompt": "take off and move to the location five comma six coma seven",
+    "returns": [
+        {"action": "takeoff", "params": []}, {"action": "fly_to_xyz", "params": [5.0, 6.0, 7.0, "cm"]}]
+}

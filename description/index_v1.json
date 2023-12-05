@@ -1,0 +1,94 @@
+{
+    "name": "TurtleSim",
+    "description": "It is a turtlesim robot which has the capability to move linearly or rotate in 2D space.",
+    "api": [
+        {
+            "name": "move",
+            "description": "This function is for the linear motion of the robot. It moves the robot forward with respect to its current pose while maintaining a velocity. This is an open loop control.",
+            "params": {
+                "distance": {
+                    "description": "This will be in meters",
+                    "type": "Float",
+                    "range": { "start": 0, "end": 10 }
+                },
+                "speed": {
+                    "description": "This will be in meters/sec",
+                    "type": "Float",
+                    "range": { "start": 0, "end": 10 }
+                },
+                "direction": {
+                    "description": "",
+                    "type": "String",
+                    "options": ["forward", "backward"],
+                    "default": "forward"
+                }
+            }
+        },
+        {
+            "name": "rotate",
+            "description": "This function is for the 2d rotational motion of the robot. This is in open loop control.",
+            "params": {
+                "angle": {
+                    "description": "This will be in radian",
+                    "type": "Float",
+                    "range": { "start": 0, "end": 6.28 }
+                },
+                "angular_speed": {
+                    "description": "This will be in radians/sec",
+                    "type": "Float"
+                },
+                "direction": {
+                    "options": ["clockwise", "anticlockwise"],
+                    "default": "anticlockwise"
+                }
+            }
+        },
+        {
+            "name": "rotateByTheta",
+            "description": "This function is for rotating the robot by a given theta and direction. It is in closed loop controll. It does no maintain an angular velocity",
+            "params": {
+                "theta": {
+                    "description": "This will be in radian",
+                    "type": "Float",
+                    "range": { "start": 0, "end": 6.28 }
+                },
+                "direction": {
+                    "options": ["clockwise", "anticlockwise"],
+                    "default": "anticlockwise"
+                }
+            }
+        },
+        {
+            "name": "moveByDistance",
+            "description":"This function is for the linear motion of the robot. It moves the robot forward with respect to its current pose by the given distance. It does no maintain an linear velocity and is done in closed loop controll.",
+            "params": {
+                "distance": {
+                    "description": "This will be in meters",
+                    "type": "Float",
+                    "range": { "start": 0, "end": 10 }
+                }
+            }
+        },
+        {
+            "name": "goToGoal",
+            "description": "This function is for moving the robot to a target pose (x,y,theta) from the current pose in a closed loop controll.",
+            "params": {
+                "goal_x": {
+                    "description": "This will be in meters",
+                    "type": "Float",
+                    "range": { "start": 0, "end": 10 }
+                },
+                "goal_y": {
+                    "description": "This will be in meters",
+                    "type": "Float",
+                    "range": { "start": 0, "end": 10 }
+                },
+                "goal_theta": {
+                    "description": "This will be in radians",
+                    "type": "Float",
+                    "range": { "start": 0, "end": 6.28 }
+                }
+            }
+        }
+    ]
+}

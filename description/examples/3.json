@@ -1,0 +1,9 @@
+{
+    "prompt": "Go ahead 3 metres",
+    "returns": [
+        {
+            "action": "fly_forward",
+            "params": [3, "m" ]
+        }
+    ]
+}
